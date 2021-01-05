@@ -7,8 +7,7 @@ const mongo_contabo = async (data) => {
     method: "POST",
     url: "http://95.111.235.214:3064/backup",
     headers: {
-      cookie:
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     data: {
       ip: "95.111.235.214",
