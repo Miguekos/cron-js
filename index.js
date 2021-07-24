@@ -1,5 +1,8 @@
 var cron = require("node-cron");
-var { mongo_contabo } = require("./cron/backup_mongos_contabo");
+var {
+  mongo_contabo,
+  mongo_contabo_32768,
+} = require("./cron/backup_mongos_contabo");
 
 // cada min
 cron.schedule(
@@ -66,8 +69,8 @@ cron.schedule(
 cron.schedule(
   "5 21 * * *",
   () => {
-    console.log("9:01 pm");
-    mongo_contabo("dev_tuenvioexpress")
+    console.log("9:05 pm");
+    // mongo_contabo("dev_tuenvioexpress")
     },
   {
     scheduled: true,
@@ -79,8 +82,8 @@ cron.schedule(
 cron.schedule(
   "10 21 * * *",
   () => {
-    console.log("9:02 pm");
-    // mongo_contabo("tuenvioexpress")
+    console.log("9:10 pm");
+    mongo_contabo_32768('equas');
   },
   {
     scheduled: true,
